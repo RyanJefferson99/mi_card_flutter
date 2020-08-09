@@ -11,34 +11,74 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundColor: Colors.white,
+                backgroundImage: (AssetImage('images/prof.jpg')),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.yellow,
+              Text(
+                'Naing Min Oo',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans Pro',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white70,
+                  letterSpacing: 2.5,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 20.0, horizontal: 20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
                   ),
-                  Container(
-                    width: 100.0,
-                    height: 100.0,
-                    color: Colors.green,
+                  title: Text(
+                    '+65 88141682',
+                    style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
+                      color: Colors.teal,
+                      fontSize: 20,
+                    ),
                   ),
-                ],
+                ),
               ),
-              Container(
-                width: 100.0,
-                height: double.infinity,
-                color: Colors.blue,
-              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'naingminoo.ryan@gmail.com',
+                    style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
+                      color: Colors.teal,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
